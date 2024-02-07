@@ -57,10 +57,10 @@ export default cartSlice.reducer;
 
 export const getCart = (state) => state.cart.cart;
 
-export const getTotalQuantity = (state) =>
+export const getTotalCartQuantity = (state) =>
   state.cart.cart.reduce((sum, item) => sum + item.quantity, 0);
 
-export const getTotalPrice = (state) =>
+export const getTotalCartPrice = (state) =>
   state.cart.cart.reduce(
     (sum, item) => sum + item.unitPrice * item.quantity,
     0,
